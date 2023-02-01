@@ -180,6 +180,7 @@ class OpenVPN {
             );
           } else if (Platform.isAndroid) {
             var data = jsonDecode(value);
+            print("CONNECTED_DATA $data");
             var connectedOn =
                 DateTime.tryParse(data["connected_on"].toString()) ??
                     _tempDateTime;
